@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   if (!desc) { return; }
 
+  desc.textContent = "クレディーでは、取り扱う商品（原料）の安全性を正しく判断出来る様に、安全試験のデータや機能性エビデンスなどを公開しています。 何故、「信頼・信用できるのか」根拠をご確認して下さい。";
+
   var oldGrid = desc.nextElementSibling;
   if (oldGrid) { oldGrid.style.display = "none"; }
 
