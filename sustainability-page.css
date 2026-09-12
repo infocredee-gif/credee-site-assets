@@ -25,22 +25,28 @@
   color: #fff;
 }
 .sus-hero .eyebrow {
+  font-family: Inter, YakuHanJP, "Noto Sans JP", sans-serif !important;
   font-size: 13px;
   letter-spacing: 0.15em;
   font-weight: 700;
   opacity: 0.85;
   margin: 0 0 8px;
+  color: #fff !important;
 }
 .sus-hero h1 {
+  font-family: Inter, YakuHanJP, "Noto Sans JP", sans-serif !important;
   font-size: clamp(28px, 4vw, 40px);
   font-weight: 700;
   margin: 0 0 12px;
+  color: #fff !important;
 }
 .sus-hero .lead {
+  font-family: Inter, YakuHanJP, "Noto Sans JP", sans-serif !important;
   font-size: 16px;
   line-height: 1.8;
   margin: 0;
   max-width: 560px;
+  color: #fff !important;
 }
 .sus-section {
   max-width: 980px;
@@ -60,18 +66,20 @@
   padding: 40px 20px;
 }
 .sus-h2 {
+  font-family: Inter, YakuHanJP, "Noto Sans JP", sans-serif !important;
   font-size: clamp(22px, 3vw, 28px);
   font-weight: 700;
-  color: #14315C;
+  color: #14315C !important;
   margin: 0 0 20px;
   padding-bottom: 10px;
   border-bottom: 2px solid #40b19a;
   display: inline-block;
 }
 .sus-body {
+  font-family: Inter, YakuHanJP, "Noto Sans JP", sans-serif !important;
   font-size: 15px;
   line-height: 2;
-  color: #14315C;
+  color: #14315C !important;
   margin: 0 0 28px;
 }
 .sus-outlook {
@@ -121,6 +129,7 @@
   flex-wrap: wrap;
 }
 .sus-cta a {
+  font-family: Inter, YakuHanJP, "Noto Sans JP", sans-serif !important;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -136,11 +145,11 @@
 }
 .sus-cta a.primary {
   background: #14315C;
-  color: #fff;
+  color: #fff !important;
 }
 .sus-cta a.secondary {
   background: #fff;
-  color: #14315C;
+  color: #14315C !important;
   border: 1px solid #14315C;
 }
 @media (max-width: 640px) {
