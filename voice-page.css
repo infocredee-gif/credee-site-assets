@@ -1,0 +1,72 @@
+.voice-legacy {
+  font-family: Inter, YakuHanJP, "Noto Sans JP", sans-serif;
+  color: #14315C;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+.voice-legacy .shop {
+  margin: 0 0 56px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(20, 49, 92, 0.18);
+}
+.voice-legacy .shop:last-child {
+  border-bottom: none;
+}
+.voice-legacy .shop-name {
+  font-size: clamp(20px, 2.6vw, 24px);
+  font-weight: 700;
+  color: #14315C;
+  margin: 0 0 12px;
+}
+.voice-legacy .shop-meta {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #6B7C8A;
+  margin: 0 0 16px;
+}
+.voice-legacy .shop-meta a {
+  color: #385C7C;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.voice-legacy .shop-lead {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #14315C;
+  margin: 0 0 20px;
+  font-weight: 700;
+}
+.voice-legacy .qa-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.voice-legacy .qa-item {
+  border: 1px solid rgba(20, 49, 92, 0.18);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.voice-legacy .qa-q {
+  background: #14315C;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 16px;
+}
+.voice-legacy .qa-a {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #14315C;
+  padding: 14px 16px;
+  white-space: pre-line;
+}
+@media (max-width: 640px) {
+  .voice-legacy .shop {
+    margin-bottom: 40px;
+    padding-bottom: 28px;
+  }
+}
