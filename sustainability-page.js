@@ -28,13 +28,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var html =
     '<div class="sus-page">' +
-    '<section class="sus-hero" style="background-image:url(\'' + heroImg + '\')">' +
+    '<div class="sus-hero-wrap">' +
+      '<section class="sus-hero" style="background-image:url(\'' + heroImg + '\')"></section>' +
+      '<div class="sus-hero-accent"></div>' +
       '<div class="sus-hero-inner">' +
         '<p class="eyebrow">SUSTAINABILITY</p>' +
         '<h1>サステナビリティ</h1>' +
         '<p class="lead">厄介者を、必要とされるものへ。</p>' +
       '</div>' +
-    '</section>' +
+    '</div>' +
 
     '<div class="sus-infographic-wrap">' +
       '<img class="sus-infographic" src="' + infographicImg + '" alt="もみ殻の課題と解決、実績を示すインフォグラフィック" />' +

@@ -2,26 +2,43 @@
   font-family: Inter, YakuHanJP, "Noto Sans JP", sans-serif;
   color: #14315C;
 }
+.sus-hero-wrap {
+  position: relative;
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto 56px;
+  padding-bottom: 40px;
+}
 .sus-hero {
   position: relative;
-  min-height: 360px;
-  display: flex;
-  align-items: flex-end;
+  height: 380px;
+  border-radius: 8px;
+  overflow: hidden;
   background-size: cover;
   background-position: center;
-  padding: 60px 24px 48px;
 }
 .sus-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(20,49,92,0.35) 0%, rgba(20,49,92,0.75) 100%);
+  background: linear-gradient(180deg, rgba(20,49,92,0.15) 0%, rgba(20,49,92,0.55) 100%);
+}
+.sus-hero-accent {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  width: min(480px, 60%);
+  height: 100px;
+  background: #BBD2E7;
+  border-radius: 0 8px 8px 0;
+  z-index: 1;
 }
 .sus-hero-inner {
-  position: relative;
-  max-width: 980px;
-  margin: 0 auto;
-  width: 100%;
+  position: absolute;
+  left: 32px;
+  bottom: 16px;
+  z-index: 2;
+  max-width: 560px;
   color: #fff;
 }
 .sus-hero .eyebrow {
@@ -47,6 +64,11 @@
   margin: 0;
   max-width: 560px;
   color: #fff !important;
+}
+@media (max-width: 640px) {
+  .sus-hero { height: 320px; }
+  .sus-hero-accent { bottom: -28px; height: 72px; width: 70%; }
+  .sus-hero-inner { left: 20px; bottom: 12px; }
 }
 .sus-section {
   max-width: 980px;
