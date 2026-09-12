@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   outerHero.style.display = "none";
   mainContent.style.display = "none";
 
-  var heroImg = "https://storage.googleapis.com/studio-design-asset-files/projects/7kad69mbO3/s-2000x1334_v-frms_webp_6c61f07a-4c27-449c-be23-e1ad57a5dc66.jpg";
+  var heroImg = "https://images.unsplash.com/photo-1572202808998-93788f6d39da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MTh8fGVhcnRofGVufDB8fHx8MTcxMzE3MTk4NXww&ixlib=rb-4.0.3&q=80&w=1080";
   var infographicImg = "https://storage.googleapis.com/studio-design-asset-files/projects/7kad69mbO3/s-1983x793_v-frms_webp_d173831b-bbcf-404c-bfb7-58d9ddeeafc9.png";
   var sdgsImg = "https://storage.googleapis.com/studio-design-asset-files/projects/VGOK5bB7an/s-1500x1500_v-fms_webp_2fb0c880-6b43-4d1f-8ca5-65e9539d1411.png";
   var paddyImg = "https://images.unsplash.com/photo-1666073633128-a4afecfb9c2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MzQ2fDB8MXxzZWFyY2h8MjM3fHxwYWRkeXxlbnwwfHx8fDE3MTMwOTMyOTJ8MA&ixlib=rb-4.0.3&q=80&w=1080";
