@@ -35,14 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
   var contactNote = "※閲覧を希望の場合は、直接お問い合わせください。";
 
   var evidenceRows = [
-    row("safety", "安全性", "276残留農薬試験", "https://credit-group.ne.jp/shiryo/ev1.pdf"),
-    row("safety", "安全性", "植物性シリカ粉末　非臨床試験", "https://credit-group.ne.jp/shiryo/ev3.pdf"),
-    row("safety", "安全性", "一般生菌・重金属試験", "https://credit-group.ne.jp/shiryo/ev10.pdf"),
-    row("safety", "安全性", "放射能試験", "https://credit-group.ne.jp/shiryo/ev14.pdf"),
-    row("safety", "安全性", "トランス脂肪酸試験", "https://credit-group.ne.jp/shiryo/ev8.pdf"),
-    row("safety", "安全性", "飽和脂肪酸試験", "https://credit-group.ne.jp/shiryo/ev9.pdf"),
-    row("safety", "安全性", "植物性シリカ濃縮液の経年による品質試験(開封済み)", "https://credit-group.ne.jp/shiryo/ev11.pdf"),
-    row("safety", "安全性", "植物性シリカ濃縮液の経年による品質試験(未開封)", "https://credit-group.ne.jp/shiryo/ev12.pdf"),
+    row("safety", "安全性", "276残留農薬試験", "https://shiryo.credit-group.ne.jp/ev1.pdf"),
+    row("safety", "安全性", "植物性シリカ粉末　非臨床試験", "https://shiryo.credit-group.ne.jp/ev3.pdf"),
+    row("safety", "安全性", "一般生菌・重金属試験", "https://shiryo.credit-group.ne.jp/ev10.pdf"),
+    row("safety", "安全性", "放射能試験", "https://shiryo.credit-group.ne.jp/ev14.pdf"),
+    row("safety", "安全性", "トランス脂肪酸試験", "https://shiryo.credit-group.ne.jp/ev8.pdf"),
+    row("safety", "安全性", "飽和脂肪酸試験", "https://shiryo.credit-group.ne.jp/ev9.pdf"),
+    row("safety", "安全性", "植物性シリカ濃縮液の経年による品質試験(開封済み)", "https://shiryo.credit-group.ne.jp/ev11.pdf"),
+    row("safety", "安全性", "植物性シリカ濃縮液の経年による品質試験(未開封)", "https://shiryo.credit-group.ne.jp/ev12.pdf"),
     row("safety", "安全性", "アモルファスＸ線回析測定試験", null, contactNote),
     row("efficacy", "有効性", "鉱物由来及び植物由来のシリカによる体内吸収比較試験", null, contactNote),
     row("efficacy", "有効性", "植物由来のシリカによる体内アルミニウム排泄試験", null, contactNote),
