@@ -10,7 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var heroTitle = Array.from(document.querySelectorAll("p")).find(function (p) {
     return p.textContent.trim() === "お問合せ" && p.closest('[class*="image--horizontal"]');
   });
-  if (heroTitle) { heroTitle.textContent = "準備中"; }
+  if (heroTitle) {
+    heroTitle.textContent = "準備中";
+    heroTitle.style.setProperty("margin-top", "90px", "important");
+  }
 
   var form = document.querySelector('form[name="form1"]');
   if (!form) { return; }
