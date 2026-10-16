@@ -161,3 +161,9 @@
 @media (max-width:680px){.denshichi-lp{font-size:14.5px}.denshichi-lp .wrap{padding-block:52px; padding-left:20px; padding-right:20px; gap:20px}.denshichi-lp .hero__in,.denshichi-lp .secnav__in,.denshichi-lp .site-header__in,.denshichi-lp .breadcrumb,.denshichi-lp .site-footer__in,.denshichi-lp .legal div{padding-left:20px; padding-right:20px}.denshichi-lp .grid2,.denshichi-lp .grid3,.denshichi-lp .process{grid-template-columns:1fr}.denshichi-lp .hero__facts{grid-template-columns:1fr}.denshichi-lp .card{padding:22px 20px}.denshichi-lp .claim{padding:22px 20px}.denshichi-lp .ctaband{padding:24px 22px; gap:18px}.denshichi-lp .site-footer__in{grid-template-columns:1fr; gap:26px}.denshichi-lp .site-header__in{height:64px}.denshichi-lp .spec th{width:auto}}
 @media (prefers-reduced-motion:reduce){.denshichi-lp, .denshichi-lp *{animation:none !important; transition:none !important; scroll-behavior:auto !important}}
 html{scroll-behavior:smooth}
+
+/* ここから下は tools/gen_denshichi.py が足している打ち消し。
+   STUDIOの外枠が display:flex のため、本文の枠を全幅に戻している。 */
+.denshichi-lp{width:100%;align-self:stretch;max-width:none}
+.denshichi-lp .section,.denshichi-lp .hero,.denshichi-lp .secnav{display:block;width:100%}
+.denshichi-lp .wrap,.denshichi-lp .hero__in,.denshichi-lp .secnav__in,.denshichi-lp .breadcrumb{width:100%}
