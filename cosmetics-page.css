@@ -325,6 +325,12 @@ body.modal-open{overflow:hidden}
 /* 共通のページタイトル帯（/silica と同じ見た目） */
 .cosmetics-lp .page-title-bar{position:relative;overflow:hidden;background:rgba(187,210,231,.3);
   padding:20px var(--page-gutter,5%) 16px}
+/* 右側に敷く背景画像。/silica と同じ出し方（右下ぞろえ・薄く重ねる）。
+   画像はユーザー指定（2026-10-19）。左側が空いた構図なので文字に重ならない。 */
+.cosmetics-lp .page-title-bar::before{content:'';position:absolute;right:0;bottom:0;
+  width:min(480px,55%);height:100%;
+  background:url('https://storage.googleapis.com/studio-design-asset-files/projects/7kad69mbO3/s-1536x1024_v-fms_webp_9c5fcd22-7f4f-4f14-94c7-9c6e2629067a.png') right bottom / cover no-repeat;
+  opacity:.4;mix-blend-mode:multiply;pointer-events:none;z-index:0}
 .cosmetics-lp .page-title-bar .inner{position:relative;z-index:1;max-width:1240px;margin:0 auto}
 .cosmetics-lp .page-title-bar .eyebrow-row{border-bottom:.8px solid #14315c;padding:0 0 10px;
   margin-bottom:10px;line-height:1}
