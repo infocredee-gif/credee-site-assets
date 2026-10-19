@@ -748,11 +748,12 @@ body { background: var(--pv-bg); color: var(--pv-ink); margin: 0; }
 
 /* 罫線が左から右へ引かれ、同時に下段のタイトルが左からスライドイン＋フェードイン。
    /silica・/cosmetics と同じ値（95%・0.8px・0.9秒・cubic-bezier(.45,0,.35,1)）。
-   色は②のこれまでどおり（罫線 --slate-faint／アイブロウ --orange-soft／タイトル --navy）。 */
+   罫線の色は /silica に合わせて --navy #14315c（ユーザー指示 2026-10-19）。
+   アイブロウ --orange-soft／タイトル --navy は②のこれまでどおり。 */
 @keyframes tbLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes tbSlide{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:translateX(0)}}
 .mizu-lp .mz-titleband-label::after{content:"";position:absolute;left:0;bottom:0;
-  width:95%;height:.8px;background:var(--slate-faint);
+  width:95%;height:.8px;background:var(--navy);
   transform:scaleX(0);transform-origin:left center;
   animation:tbLine .9s cubic-bezier(.45,0,.35,1) both}
 .mizu-lp .mz-titleband-title{animation:tbSlide .9s cubic-bezier(.45,0,.35,1) both}
