@@ -339,9 +339,22 @@ body.modal-open{overflow:hidden}
   margin-bottom:10px;line-height:1}
 .cosmetics-lp .page-title-bar .eyebrow{font:500 24px/1 var(--sans);color:#ffaf4e}
 .cosmetics-lp .page-title-bar .heading{font:500 26px/1.2 var(--sans);color:#14315c;margin:0}
-/* 動き（/silica の帯と同じ）。左から右へ開き、中の文字が遅れて浮かぶ。 */
-@keyframes tbReveal{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+/* 動き（2026-10-19 ユーザー指定）
+     ・背景は板付き。最初から出ていて動かさない
+     ・線が左から右へ引かれる。それと同時に上段の英字がフェードインを始める
+     ・下段の見出しは、線の引き終わりと同時にフェードインが完了する
+   時間の設計：線と英字は 0〜0.9秒。見出しは 0.3〜0.9秒（0.9秒でちょうど出そろう）。 */
+@keyframes tbLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes tbFade{from{opacity:0}to{opacity:1}}
-.cosmetics-lp .page-title-bar{animation:tbReveal .9s cubic-bezier(.4,.4,0,1) both}
-.cosmetics-lp .page-title-bar .inner{animation:tbFade 1.5s ease-in-out .6s both}
-@media (prefers-reduced-motion:reduce){.cosmetics-lp .page-title-bar,.cosmetics-lp .page-title-bar .inner{animation:none}}
+/* 線は border では左右に引けないので、同じ太さの帯を敷いて横に伸ばす */
+.cosmetics-lp .page-title-bar .eyebrow-row{position:relative;border-bottom:0}
+.cosmetics-lp .page-title-bar .eyebrow-row::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:.8px;background:#14315c;
+  transform:scaleX(0);transform-origin:left center;
+  /* 終盤まで動きが見えるイージング。前のめりだと線が先に着いて見え、
+     「線の引き終わりと同時に見出しが出そろう」という指定から外れる。 */
+  animation:tbLine .9s cubic-bezier(.45,0,.35,1) both;
+}
+.cosmetics-lp .page-title-bar .eyebrow{animation:tbFade .9s ease-out both}
+.cosmetics-lp .page-title-bar .heading{animation:tbFade .6s ease-out .3s both}
+@media (prefers-reduced-motion:reduce){.cosmetics-lp .page-title-bar .eyebrow-row::after{animation:none;transform:scaleX(1)}.cosmetics-lp .page-title-bar .eyebrow,.cosmetics-lp .page-title-bar .heading{animation:none}}
