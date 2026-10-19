@@ -735,3 +735,34 @@ body { background: var(--pv-bg); color: var(--pv-ink); margin: 0; }
 .mizu-lp .mz-split > *,
 .mizu-lp .mz-split-media,
 .mizu-lp .mz-scroll-x{min-width:0}
+
+/* タイトル帯の高さを、他ページ（/silica・/cosmetics の .page-title-bar）に揃える。
+   共通CSSの帯は 2026-10-07 時点の旧仕様で、高さ174px固定・上の余白80px。
+   現行の帯は内容なりの高さ（1280pxで /silica 121px・/cosmetics 111px）。
+   ここでは高さの指定を外し、上下の余白を現行と同じ 20px / 16px にする。 */
+.mizu-lp .mz-titleband{height:auto}
+.mizu-lp .mz-titleband-inner{padding:20px 40px 16px}
+.mizu-lp .mz-titleband-label{position:relative;padding:0 0 10px;margin-bottom:10px;
+  font-size:24px;font-weight:500;line-height:1}
+.mizu-lp .mz-titleband-title{padding:0;border-top:0}
+
+/* 罫線が左から右へ引かれ、同時に下段のタイトルが左からスライドイン＋フェードイン。
+   /silica・/cosmetics と同じ値（95%・0.8px・0.9秒・cubic-bezier(.45,0,.35,1)）。
+   色は②のこれまでどおり（罫線 --slate-faint／アイブロウ --orange-soft／タイトル --navy）。 */
+@keyframes tbLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes tbSlide{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:translateX(0)}}
+.mizu-lp .mz-titleband-label::after{content:"";position:absolute;left:0;bottom:0;
+  width:95%;height:.8px;background:var(--slate-faint);
+  transform:scaleX(0);transform-origin:left center;
+  animation:tbLine .9s cubic-bezier(.45,0,.35,1) both}
+.mizu-lp .mz-titleband-title{animation:tbSlide .9s cubic-bezier(.45,0,.35,1) both}
+@media (prefers-reduced-motion:reduce){
+  .mizu-lp .mz-titleband-label::after{animation:none;transform:scaleX(1)}
+  .mizu-lp .mz-titleband-title{animation:none}
+}
+
+@media (max-width:640px){
+  .mizu-lp .mz-titleband{height:auto}
+  .mizu-lp .mz-titleband-inner{padding:16px 16px 14px}
+  .mizu-lp .mz-titleband-label{font-size:22px}
+}
