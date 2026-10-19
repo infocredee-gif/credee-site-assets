@@ -319,12 +319,15 @@ body.modal-open{overflow:hidden}
 /* STUDIOの外枠（body > div.box）は display:flex / align-items:center のため、
    中に入れた枠が伸びず、内容の幅に縮む。その結果、表が縮まずに横へはみ出す。
    外枠の指定に勝てるよう打ち消す。 */
-/* min-width:0 がないと、flexの子は中身の最小幅より縮まない。
+/* 本文は全幅のまま（2026-10-19 ユーザー確認：80%にするのは帯だけ）。
+   min-width:0 がないと、flexの子は中身の最小幅より縮まない。
    表に min-width:660px が付いているため、これが無いと枠ごと横に広がる。 */
 .cosmetics-lp{width:100%;align-self:stretch;max-width:none;min-width:0}
 /* 共通のページタイトル帯（/silica と同じ見た目） */
+/* 帯の幅は画面の80%（2026-10-19 ユーザー指示）。本文は全幅のまま。 */
 .cosmetics-lp .page-title-bar{position:relative;overflow:hidden;background:rgba(187,210,231,.3);
-  padding:20px var(--page-gutter,5%) 16px}
+  padding:20px var(--page-gutter,5%) 16px;
+  width:80%;margin-left:auto;margin-right:auto}
 /* 右側に敷く背景画像。/silica と同じ出し方（右下ぞろえ・薄く重ねる）。
    画像はユーザー指定（2026-10-19）。左側が空いた構図なので文字に重ならない。 */
 .cosmetics-lp .page-title-bar::before{content:'';position:absolute;right:0;bottom:0;
@@ -336,3 +339,9 @@ body.modal-open{overflow:hidden}
   margin-bottom:10px;line-height:1}
 .cosmetics-lp .page-title-bar .eyebrow{font:500 24px/1 var(--sans);color:#ffaf4e}
 .cosmetics-lp .page-title-bar .heading{font:500 26px/1.2 var(--sans);color:#14315c;margin:0}
+/* 動き（/silica の帯と同じ）。左から右へ開き、中の文字が遅れて浮かぶ。 */
+@keyframes tbReveal{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes tbFade{from{opacity:0}to{opacity:1}}
+.cosmetics-lp .page-title-bar{animation:tbReveal .9s cubic-bezier(.4,.4,0,1) both}
+.cosmetics-lp .page-title-bar .inner{animation:tbFade 1.5s ease-in-out .6s both}
+@media (prefers-reduced-motion:reduce){.cosmetics-lp .page-title-bar,.cosmetics-lp .page-title-bar .inner{animation:none}}
