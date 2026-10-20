@@ -736,6 +736,14 @@ body { background: var(--pv-bg); color: var(--pv-ink); margin: 0; }
 .mizu-lp .mz-split-media,
 .mizu-lp .mz-scroll-x{min-width:0}
 
+/* 共通CSSは、スクロール枠の中の表すべてに min-width:620px を強制している
+   （全幅セクションの横長の比較表のための値）。2段組みのセクションでは枠が572pxしかなく、
+   中身が足りているのに620pxへ引き伸ばされ、48pxはみ出して不要な横スクロールバーが出る。
+   430px は実測値（枠430px=セル高65px／枠420px=97px。これを下回ると文字が折り返し始める）。
+   1280px・1024pxではバーが消え、768px・390pxでもはみ出し量が減る。折り返しは増えない。
+   ユーザー指示 2026-10-20。④/water/natural は未確認のため対象外。 */
+.mizu-lp .mz-split .mz-scroll-x > .mz-spec{min-width:430px}
+
 /* タイトル帯の高さを、他ページ（/silica・/cosmetics の .page-title-bar）に揃える。
    共通CSSの帯は 2026-10-07 時点の旧仕様で、高さ174px固定・上の余白80px。
    現行の帯は内容なりの高さ（1280pxで /silica 121px・/cosmetics 111px）。
