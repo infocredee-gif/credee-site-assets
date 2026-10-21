@@ -360,3 +360,7 @@ body.modal-open{overflow:hidden}
 }
 .cosmetics-lp .page-title-bar .heading{animation:tbSlide .9s cubic-bezier(.45,0,.35,1) both}
 @media (prefers-reduced-motion:reduce){.cosmetics-lp .page-title-bar .eyebrow-row::after{animation:none;transform:scaleX(1)}.cosmetics-lp .page-title-bar .heading{animation:none}}
+/* 先頭に残っていた作業用の目次を隠す（2026-10-21）。
+   同じ id の要素がページ内に2つあり、2つ目は本物の見出し「素材と製造について」。
+   消していいのは #s へのリンクを持つほうだけ。 */
+h2[id^="index_"]:has(a[href^="#s"]){display:none !important}

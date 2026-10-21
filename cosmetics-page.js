@@ -33,6 +33,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   if (!placed) { return; }
 
+  /* ページ上部の余白。
+     もともとは、ヘッダーの裏に残っていた作業用の目次（STUDIOのテキスト要素）が
+     場所を取ることで、結果的に余白になっていた。その目次をCSSで隠したので、
+     代わりにここで余白を作る。値は固定にせず、ヘッダーの実際の高さを測って使う
+     （1280pxで80px・390pxで89pxと変わるため）。水事業のページと同じ考え方。
+     ユーザー指摘 2026-10-21。 */
+  var firstBox = document.querySelector(".cosmetics-lp");
+  var setTopGap = function () {
+    var head = document.querySelector("header");
+    if (!head || !firstBox) { return; }
+    var h = head.getBoundingClientRect().height;
+    if (h > 0) { firstBox.style.setProperty("margin-top", h + "px", "important"); }
+  };
+  setTopGap();
+  window.addEventListener("resize", setTopGap);
+  window.addEventListener("load", setTopGap);
+
   /* ダイアログは1つだけ置く（元は18個の埋め込みに同じものが入っていた） */
   var dlg = document.createElement("div");
   dlg.className = "cosmetics-lp";
