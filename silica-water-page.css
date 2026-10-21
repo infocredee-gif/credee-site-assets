@@ -775,3 +775,7 @@ body { background: var(--pv-bg); color: var(--pv-ink); margin: 0; }
   .mizu-lp .mz-titleband-inner{padding:16px 16px 14px}
   .mizu-lp .mz-titleband-label{font-size:22px}
 }
+
+/* /oem/oem-water への内部リンク（節44）。このサイトのリンクは色も下線も本文と同じなので、
+   文中に置くとリンクだと分からない。この1本だけ下線を付ける（2026-10-21）。 */
+.mizu-lp .mz-note a[href="/oem/oem-water"]{text-decoration:underline;text-underline-offset:3px}
