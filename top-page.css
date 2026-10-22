@@ -215,6 +215,12 @@
 .credee-top .btn{display:block;text-align:center;padding:18px 20px}
 }
 
+/* 薄いグレーが白背景でコントラスト不足だった（2026-10-22 本番で実測）。
+   注記 --muted は 2.86、英字ラベル --en は 3.41。どちらも本文基準の 4.5 に届かない。
+   背景は --bg #fdfcfa と --bg2 #f5f3ef の2種あるので、暗いほうで 4.5 を満たす値にする。
+   実測値 … --muted 4.98〜5.38 / --en 4.95〜5.35 */
+.credee-top{--muted:#6d6862;--en:#6f6861}
+
 /* STUDIOの外枠（body > div.box）は display:flex / align-items:center のため、
    中に入れた枠が伸びず内容の幅に縮む。②③④と同じ打ち消し。 */
 .credee-top{width:100%;align-self:stretch;max-width:none;min-width:0}
@@ -231,7 +237,15 @@
    顔を中心に切り抜いたものに差し替えた（2026-10-22）。
    モックの object-position は旧素材に合わせた 56% 40% で、新しい素材では右に寄る。
    92pxの丸枠の中央に顔が来るよう 50% 42% にする。 */
-.credee-top .person .face96 img{object-position:50% 42%}
+.credee-top .person .face96{background:#fff}
+.credee-top .person .face96 img{transform-origin:0 0;transform:translate(8.9%,11%) scale(1.179)}
+
+/* 2026-10-22 追記：object-position では直らなかった。
+   画像も枠も正方形なので object-fit:cover では拡大が起きず、
+   384角の写真が92pxの丸にそのまま入る。顔は枠の左上に小さく写る。
+   実測 … 顔の中心 (134,114) / 顔の高さ 228px（いずれも384角の中）。
+   顔が枠の70%を占め、中心が枠の(50%,46%)に来るよう transform で寄せた（ユーザー選択）。
+   余る左上は写真の地色と同じ白で埋める（枠の既定は --bg2 で少し灰色）。 */
 
 /* 試験の仕様は「項目　　値」を全角スペースで揃えている。
    注記を18pxに上げたことで列幅（1280pxで475px）を少し超え、
