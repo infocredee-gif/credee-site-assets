@@ -57,3 +57,6 @@
   }
   .pet-water-lp summary:after { content: '' !important; }
 }
+
+/* 2026-10-24 モバイルでLP全体が親の幅を超え、左右が切れる問題の修正 */
+.pet-water-lp{width:100%;min-width:0;max-width:100%}
