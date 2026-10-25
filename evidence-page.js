@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "<h2>エビデンス</h2>" +
     '<ul class="evidence-list">' + evidenceRows + "</ul>" +
     "<h2>文献・論文</h2>" +
+    '<p class="lit-note">ここに掲載しているのは、ケイ素・シリカに関して第三者が発表した研究文献の一覧です。当社商品の効果を示すものではありません。当社商品は医薬品ではなく、疾病の診断・治療・予防を目的としたものではありません。</p>' +
     '<ul class="evidence-list">' + literatureRows + "</ul>" +
     "</div>";
 

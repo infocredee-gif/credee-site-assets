@@ -73,3 +73,10 @@
     align-items: flex-start;
   }
 }
+
+.evidence-legacy .lit-note {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #4F6275;
+  margin: -8px 0 18px;
+}
