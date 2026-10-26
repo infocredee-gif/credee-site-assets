@@ -114,3 +114,7 @@
   max-height:100%;
   aspect-ratio:7 / 20;
 }.komenuka-lp .monthly-product img.product-bottle-photo{ width:56px; height:160px; }.komenuka-lp .two-material-product img.product-bottle-photo{ width:52.5px; height:150px; }
+/* タブレット幅でも流れ図を縦に積む。横1列だと枠の中で横スクロールになり、6・7ステップ目が見落とされるため（2026-10-26） */
+@media (max-width:1024px){
+  .komenuka-lp .mechanism-flow{ grid-template-columns: 1fr; }
+}
