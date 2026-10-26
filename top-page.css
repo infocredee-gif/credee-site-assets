@@ -217,6 +217,7 @@
 @media (max-height:760px){
 .credee-top .fv .welcome{top:8vh;max-height:calc(100% - 8vh - var(--fvnav-h) - 16px)}
 }
+.credee-top .fv .scroll{left:16px}
 
 /* 薄いグレーが白背景でコントラスト不足だった（2026-10-22 本番で実測）。
    注記 --muted は 2.86、英字ラベル --en は 3.41。どちらも本文基準の 4.5 に届かない。
