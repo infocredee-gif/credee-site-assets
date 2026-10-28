@@ -218,6 +218,85 @@
 .credee-top .fv .welcome{top:8vh;max-height:calc(100% - 8vh - var(--fvnav-h) - 16px)}
 }
 .credee-top .fv .scroll{left:16px}
+.credee-top .pinwrap{position:relative}
+.credee-top .pinwrap .chapter{
+  position:sticky;top:0;z-index:0;
+  height:100svh;min-height:520px;overflow:hidden;
+}
+.credee-top .pinwrap .chapter .pic{height:100%}
+.credee-top .pinwrap .chapter .pic img{width:100%;height:100%;object-fit:cover}
+.credee-top .pinwrap .capfloat{
+  position:absolute;top:0;left:0;right:0;
+  height:100svh;min-height:520px;z-index:0;pointer-events:none;overflow:hidden;
+}
+.credee-top .pinwrap .capfloat .cap{position:absolute;right:9%;top:50%;transform:translateY(-50%);z-index:4;text-align:center}
+.credee-top .pinwrap .capfloat .shade-r{
+  -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,1) 0,rgba(0,0,0,1) 58%,rgba(0,0,0,0) 100%);
+  mask-image:linear-gradient(180deg,rgba(0,0,0,1) 0,rgba(0,0,0,1) 58%,rgba(0,0,0,0) 100%);
+}
+.credee-top .pinwrap .capfloat .cap h2{
+  font-family:var(--mincho);font-weight:700;color:#fff;font-size:60px;
+  letter-spacing:.44em;margin:0 0 16px;text-indent:.44em;text-shadow:0 2px 36px rgba(0,0,0,.5);
+}
+.credee-top .pinwrap .capfloat .cap p{
+  font-family:var(--latin);font-size:20px;letter-spacing:.28em;
+  color:rgba(255,255,255,.94);margin:0;text-shadow:0 2px 24px rgba(0,0,0,.5);
+}
+.credee-top .pinwrap > section{position:relative;z-index:1;background:transparent}
+.credee-top .pinwrap > section > *{position:relative;z-index:1}
+.credee-top .pinwrap > section::before{
+  content:"";position:absolute;inset:0;z-index:0;
+  
+  background:linear-gradient(90deg,
+    rgba(253,252,250,.60) 0%,
+    rgba(253,252,250,.72) 18%,
+    rgba(253,252,250,.72) 82%,
+    rgba(253,252,250,.60) 100%);
+  
+  -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0,0,0,1) 150px);
+  mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0,0,0,1) 150px);
+}
+.credee-top .pinwrap > section p,.credee-top .pinwrap > section .head .en,.credee-top .pinwrap > section .kv,.credee-top .pinwrap > section .cap2{color:var(--sumi)}
+@media (max-width:880px){
+.credee-top .pinwrap .chapter,.credee-top .pinwrap .capfloat{min-height:460px}
+.credee-top .pinwrap .capfloat .cap{right:0;left:0}
+.credee-top .pinwrap .capfloat .shade-r{background:rgba(20,18,16,.44)}
+.credee-top .pinwrap .capfloat .cap h2{font-size:39px;letter-spacing:.28em}
+.credee-top .pinwrap .capfloat .cap p{font-size:18px}
+.credee-top .pinwrap > section::before{
+    background:rgba(253,252,250,.72);
+    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0,0,0,1) 88px);
+    mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0,0,0,1) 88px);
+  }
+}
+.credee-top .pinwrap > section.s09 .voices{background:rgba(226,221,214,.72);border-color:rgba(226,221,214,.72)}
+.credee-top .pinwrap > section.s09 .voices .card{background:rgba(245,243,239,.82)}
+.credee-top .pinwrap > section.s09 .voices .card:empty{background:transparent}
+.credee-top .pinwrap > section.s09{padding-bottom:300px}
+.credee-top .pinwrap > section.s09::before{
+  -webkit-mask-image:linear-gradient(180deg,
+    rgba(0,0,0,0) 0,rgba(0,0,0,1) 150px,
+    rgba(0,0,0,1) calc(100% - 280px),rgba(0,0,0,0) 100%);
+  mask-image:linear-gradient(180deg,
+    rgba(0,0,0,0) 0,rgba(0,0,0,1) 150px,
+    rgba(0,0,0,1) calc(100% - 280px),rgba(0,0,0,0) 100%);
+}
+@media (max-width:880px){
+.credee-top .pinwrap > section.s09{padding-bottom:200px}
+.credee-top .pinwrap > section.s09::before{
+    -webkit-mask-image:linear-gradient(180deg,
+      rgba(0,0,0,0) 0,rgba(0,0,0,1) 88px,
+      rgba(0,0,0,1) calc(100% - 190px),rgba(0,0,0,0) 100%);
+    mask-image:linear-gradient(180deg,
+      rgba(0,0,0,0) 0,rgba(0,0,0,1) 88px,
+      rgba(0,0,0,1) calc(100% - 190px),rgba(0,0,0,0) 100%);
+  }
+}
+@media (prefers-reduced-motion:reduce){
+.credee-top .pinwrap .chapter{position:static;height:560px;min-height:0}
+.credee-top .pinwrap .capfloat{height:560px;min-height:0}
+.credee-top .pinwrap > section::before{-webkit-mask-image:none;mask-image:none}
+}
 
 /* 薄いグレーが白背景でコントラスト不足だった（2026-10-22 本番で実測）。
    注記 --muted は 2.86、英字ラベル --en は 3.41。どちらも本文基準の 4.5 に届かない。
