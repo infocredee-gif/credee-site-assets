@@ -1,7 +1,10 @@
 /* 田七人参de笑み 販売パートナー募集（/partner/denshichi）
    このファイルは tools/gen_denshichi.py が生成します。直接編集しないでください。
    直すときは assets/denshichi/source.html を編集して、スクリプトを再実行します。 */
-document.addEventListener("DOMContentLoaded", function () {
+/* ローダーから後で読み込まれても動くようにしてある（tools/make_loader.py）。
+   静的な <script src> で読んだときの動きは、書き換える前と同じ。 */
+(function () {
+  var __start = function () {
   var path = window.location.pathname.replace(/\/$/, "");
   if (path !== "/partner/denshichi") { return; }
 
@@ -68,4 +71,10 @@ document.addEventListener("DOMContentLoaded", function () {
   css.onerror = start;            /* CSSが取れなくても本文は出す */
   window.setTimeout(start, 3000); /* 保険：遅くても3秒で出す */
   document.head.appendChild(css);
-});
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", __start);
+  } else {
+    __start();
+  }
+})();
