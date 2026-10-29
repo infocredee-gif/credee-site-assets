@@ -729,6 +729,23 @@ body { background: var(--pv-bg); color: var(--pv-ink); margin: 0; }
 @media (max-width: 640px) { .pv-bar { position: static; } .pv-tab { flex: 1 1 100%; } .pv-title { flex: 1 1 100%; } }
 
 @media (max-width:640px){.mizu-lp{--gutter:16px}} .mz-spec tr.is-org th,.mz-spec tr.is-org td{font-size:var(--fs-note);color:var(--muted);padding-top:10px;padding-bottom:10px} .mz-org{margin:6px 0 0;color:var(--muted);font-size:18px;line-height:1.7;text-align:left} /* 年表の行に重ねて置いた特許証が、次のセクションにはみ出すのを防ぐ。 証書は340px幅・縦1448/1086の比率なので、見出しを含めて約495px。行の最低の高さをそれ以上にする */ @media (min-width:901px){ .mizu-lp .mz-timeline > li.has-fig{min-height:510px} } .mizu-lp .mz-note{font-size:18px;line-height:1.9} .mizu-lp .mz-source{font-size:18px;line-height:1.9} .mizu-lp .mz-chart .c-area{fill:var(--navy);opacity:.10} .mizu-lp .mz-chart .c-base{stroke:var(--slate);stroke-width:1.5} .mizu-lp .mz-chart .c-tickmark{stroke:var(--slate);stroke-width:1} .mizu-lp .mz-chart .c-callout{fill:var(--navy);font-size:19px;font-weight:700;text-anchor:middle} .mizu-lp .mz-chart .c-callout.is-sub{fill:var(--slate);font-size:19px;font-weight:400} .mizu-lp .mz-chart .c-note-svg.is-left{text-anchor:start;font-size:18px} .mizu-lp .mz-glossary{margin:40px auto 0;padding:28px 32px;max-width:900px;background:var(--surface-alt);border:1px solid var(--line);text-align:left} .mizu-lp .mz-glossary .mz-subhead{margin-top:0;text-align:center} .mizu-lp .mz-glossary .mz-prose{margin-left:auto;margin-right:auto;text-align:center} .mizu-lp .mz-glossary .mz-spec{margin-bottom:0} .mizu-lp .mz-glossary .mz-note{margin-bottom:0} @media (max-width:640px){.mizu-lp .mz-glossary{padding:20px 16px}} /* 強調したい語句（ユーザー指示 2026-10-25。既存の見出しと同じオレンジ） */ .mizu-lp .mz-orange{color:#F78C11} 
+/* 検査結果の見せ方（ユーザー指示 2026-10-29）。
+   「4つのドキュメントを二段に配置」。中身は次の4枚で、どれも同じ大きさ（96x136px・A4比）。
+     1段目：水質検査51項目 1/2 ／ 51項目 2/2
+     2段目：PFAS 4項目      ／ マイクロプラスチック
+
+   51項目の画像（1241x3528）は、A4 2ページを縦に継いだ1枚。実測した継ぎ目は
+   y=1679〜1840 の白帯で、中点はちょうど y=1764（＝高さの半分）。
+   そこで同じ画像を2枚並べ、object-position で上半分・下半分を出し分ける。
+   新しくアップロードする画像は増えない（URLが同じなので通信も1回）。
+
+   枠の幅：画像2列(96x2+10=202px) ＋ 隙間20px ＋ 左右の内側余白40px ＝ 262px を
+   文字欄の外で使う。max-width:640px で文字欄に378px残り、
+   「50µm以上のプラスチック類は観察されず」が1行で入る（実測）。 */
+.mizu-lp .mz-permit{max-width:640px}
+.mizu-lp .mz-permit .mz-docs{display:grid;grid-template-columns:repeat(2,96px);gap:10px;flex:0 0 auto}
+.mizu-lp .mz-permit .mz-docs .mz-doc{width:96px;height:136px;object-fit:cover;object-position:center top}
+.mizu-lp .mz-permit .mz-docs .mz-doc.is-bottom{object-position:center bottom}
 /* STUDIOの外枠（body > div.box）は display:flex / align-items:center のため、
    中に入れた枠が伸びず内容の幅に縮む。min-width:0 がないと、表などの
    最小幅より縮まない。/cosmetics・/partner/denshichi と同じ打ち消し。 */
