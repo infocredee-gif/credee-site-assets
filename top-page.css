@@ -120,7 +120,8 @@
 .credee-top .s02 .closing{margin-top:60px;padding-top:40px;border-top:1px solid var(--line);font-size:19px;font-weight:600;color:var(--sumi);line-height:2.5}
 .credee-top .s02 .narrow{max-width:880px}
 .credee-top .s03{background:var(--bg2)}
-.credee-top .s03 .grid{display:grid;grid-template-columns:44% 1fr;gap:76px;align-items:center}
+.credee-top .s03 .narrow{max-width:880px}
+.credee-top .s03 .fig{margin:68px 0}
 .credee-top .s03 .n{font-family:var(--mincho);font-weight:600;color:var(--sumi);font-size:52px;line-height:1;vertical-align:-6px;margin:0 8px;letter-spacing:.02em}
 .credee-top .s03 .punch{font-family:var(--mincho);font-weight:700;font-size:29px;line-height:2.2;color:var(--sumi);border-top:1px solid var(--line);padding-top:40px;margin-top:46px;letter-spacing:.14em}
 .credee-top .evi + .evi{margin-top:120px;padding-top:120px;border-top:1px solid var(--line)}
@@ -233,7 +234,7 @@
 .credee-top .evi h3{font-size:23px;line-height:1.95}
 .credee-top .evi .solo .quote{font-size:19px;line-height:2.2}
 .credee-top .s08 h2{font-size:31px;letter-spacing:.1em;margin-bottom:56px}
-.credee-top .s03 .grid,.credee-top .evi .grid,.credee-top .s10 .grid{grid-template-columns:1fr;gap:42px}
+.credee-top .evi .grid,.credee-top .s10 .grid{grid-template-columns:1fr;gap:42px}
 .credee-top .three,.credee-top .voices,.credee-top .ctas,.credee-top .biz{grid-template-columns:1fr}
 .credee-top .three .it{border-right:none;border-bottom:1px solid var(--line);padding:46px 20px}
 .credee-top .three .it:last-child{border-bottom:none}
