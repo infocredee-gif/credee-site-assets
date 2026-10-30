@@ -1,7 +1,7 @@
 .credee-top{
   
   --bg:#ffffff;          
-  --bg2:#f1efdf;         
+  --bg2:#f2f4d9;         
   --sumi:#07503f;        
   --sub:#1d5c4b;         
   --muted:#3d6b5d;       
@@ -116,6 +116,7 @@
 .credee-top .btn-w{border-color:rgba(255,255,255,.85);color:#fff}
 .credee-top .btn-w-fill{background:#fff;color:var(--sumi);border-color:#fff}
 .credee-top .s02 .fig{margin:68px 0}
+.credee-top .s02 > .inner.narrow > p:not([class]){font-size:26px;line-height:2.35;letter-spacing:.11em}
 .credee-top .s02 .closing{margin-top:60px;padding-top:40px;border-top:1px solid var(--line);font-size:19px;font-weight:600;color:var(--sumi);line-height:2.5}
 .credee-top .s02 .narrow{max-width:880px}
 .credee-top .s03{background:var(--bg2)}
