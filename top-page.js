@@ -26,14 +26,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var headerEl = document.querySelector("header");
     if (headerEl) {
-      /* ヘッダーとフッターの間にある既存の中身を隠して、その場所に差し込む */
+      /* ヘッダーより後ろにある既存の中身を、フッター以外すべて隠して差し込む。
+         以前は footer で break していたが、STUDIOのトップページでは
+         フッターの「後ろ」にも旧コンテンツが5つ並んでいて（Message／NEW SERVICE／
+         CREDEEの取り組み／Technology／News、合わせて約2,800px）、
+         そこに手が届かず、フッターの下に古いページが丸ごと見えていた。
+         2026-10-31に実測して判明。break をやめ、フッターだけ飛ばして最後まで見る。 */
       var node = headerEl.nextElementSibling;
       while (node) {
         var tag = node.tagName ? node.tagName.toLowerCase() : "";
-        if (tag === "footer" || node.getAttribute("role") === "contentinfo") { break; }
+        var isFooter = (tag === "footer" || node.getAttribute("role") === "contentinfo");
         var toHide = node;
         node = node.nextElementSibling;
-        toHide.style.setProperty("display", "none", "important");
+        if (!isFooter) { toHide.style.setProperty("display", "none", "important"); }
       }
       headerEl.insertAdjacentElement("afterend", wrap);
     } else {
