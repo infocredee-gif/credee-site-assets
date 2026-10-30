@@ -117,13 +117,15 @@
 .credee-top .btn-w-fill{background:#fff;color:var(--sumi);border-color:#fff}
 .credee-top .s02 .fig{margin:68px 0}
 .credee-top .s02 > .inner.narrow > p:not([class]){font-size:26px;line-height:2.35;letter-spacing:.11em}
-.credee-top .s02 .closing{margin-top:60px;padding-top:40px;border-top:1px solid var(--line);font-size:19px;font-weight:600;color:var(--sumi);line-height:2.5}
+.credee-top .s02 .closing{margin-top:60px;padding-top:40px;border-top:1px solid rgba(238,252,250,.3);font-size:26px;font-weight:600;line-height:2.3}
+.credee-top .s02 .cap2{font-size:22px}
 .credee-top .s02 .narrow{max-width:880px}
 .credee-top .s03{background:var(--bg2)}
 .credee-top .s03 .narrow{max-width:880px}
+.credee-top .s03 > .inner.narrow > p:not([class]){font-size:26px;line-height:2.35;letter-spacing:.11em}
 .credee-top .s03 .fig{margin:68px 0}
 .credee-top .s03 .n{font-family:var(--mincho);font-weight:600;color:var(--sumi);font-size:52px;line-height:1;vertical-align:-6px;margin:0 8px;letter-spacing:.02em}
-.credee-top .s03 .punch{font-family:var(--mincho);font-weight:700;font-size:29px;line-height:2.2;color:var(--sumi);border-top:1px solid var(--line);padding-top:40px;margin-top:46px;letter-spacing:.14em}
+.credee-top .s03 .punch{font-family:var(--mincho);font-weight:700;font-size:36px;line-height:2.0;color:var(--sumi);border-top:1px solid var(--line);padding-top:40px;margin-top:46px;letter-spacing:.14em;text-align:center}
 .credee-top .evi + .evi{margin-top:120px;padding-top:120px;border-top:1px solid var(--line)}
 .credee-top .evi .grid{display:grid;grid-template-columns:1fr 1fr;gap:66px;align-items:center}
 .credee-top .evi h3{font-family:var(--mincho);font-weight:700;font-size:30px;line-height:2.15;letter-spacing:.13em;margin:0 0 46px;color:var(--sumi)}
@@ -291,12 +293,21 @@
   mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0,0,0,1) 150px);
 }
 .credee-top .pinwrap > section p,.credee-top .pinwrap > section .head .en,.credee-top .pinwrap > section .kv,.credee-top .pinwrap > section .cap2{color:var(--sumi)}
+.credee-top .pinwrap > section.s02::before{
+  background:linear-gradient(90deg,
+    rgba(26,38,30,.56) 0%,
+    rgba(26,38,30,.62) 18%,
+    rgba(26,38,30,.62) 82%,
+    rgba(26,38,30,.56) 100%);
+}
+.credee-top .pinwrap > section.s02 .head h2,.credee-top .pinwrap > section.s02 p,.credee-top .pinwrap > section.s02 .head .en,.credee-top .pinwrap > section.s02 .kv,.credee-top .pinwrap > section.s02 .cap2{color:#eefcfa}
 @media (max-width:880px){
 .credee-top .pinwrap .chapter,.credee-top .pinwrap .capfloat{min-height:460px}
 .credee-top .pinwrap .capfloat .cap{right:0;left:0}
 .credee-top .pinwrap .capfloat .shade-r{background:rgba(20,18,16,.44)}
 .credee-top .pinwrap .capfloat .cap h2{font-size:39px;letter-spacing:.28em}
 .credee-top .pinwrap .capfloat .cap p{font-size:18px}
+.credee-top .pinwrap > section.s02::before{background:rgba(26,38,30,.62)}
 .credee-top .pinwrap > section::before{
     background:rgba(255,255,255,.82);
     -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0,0,0,1) 88px);
