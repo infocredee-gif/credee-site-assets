@@ -1,0 +1,28 @@
+[
+  {
+    "id": "junkan",
+    "name": "潤環",
+    "file_name": "junkan.webp",
+    "width": 2048,
+    "height": 2048,
+    "viewbox": [
+      762,
+      136,
+      526,
+      1755
+    ]
+  },
+  {
+    "id": "silica-time",
+    "name": "シリカTime",
+    "file_name": "silica-time.webp",
+    "width": 1365,
+    "height": 2048,
+    "viewbox": [
+      431,
+      197,
+      544,
+      1778
+    ]
+  }
+]

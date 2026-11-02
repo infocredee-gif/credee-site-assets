@@ -1,0 +1,18 @@
+[
+  {
+    "id": "water-studio",
+    "paths": [
+      "/workspace/sites/credee-global-partner-20261102/handoff/product-scenes/water-products-spring-scene.png",
+      "/workspace/sites/credee-global-partner-20261102/source/provided-products/junkan.png",
+      "/workspace/sites/credee-global-partner-20261102/source/provided-products/silica-time.png"
+    ],
+    "prompt": "Use case: precise-object-edit, background replacement. Image 1 is the existing two-bottle Water Products photograph to edit. Images 2 and 3 are supporting original bottle/label references only. Preserve both products from image 1 with maximum fidelity: left 潤環 JUNKANN with white blue/lavender label, right シリカTime with the orange rice label and lower information panel. Preserve all words/numbers/designs, cap shapes, clear PET bottles and clear water, same relative scale, upright front-facing pose and common baseline. Exactly two bottles.\nReplace the ENTIRE woodland/river/rock/leaf background with a clean premium indoor studio setup: pale ice-blue fading gently to white backdrop, smooth matte white countertop or low white plinth, soft diffuse daylight, extremely subtle pale aqua light reflections in background. Simple, airy, fresh, clean product photography with clear label contrast and soft realistic contact shadows. No forest, river, stream, spring, trees, leaves, plants, rocks, mountains, outdoors, rustic textures or background scenery. This image appears beside a forest water-source photo, so its background must read unmistakably as a quiet white/light-blue studio.\nCompose a landscape 4:3 image. Keep entire caps and bottle bases inside frame, balanced center composition, matching height, comfortable gap, bottles about 80% image height, labels unobstructed. Retain the exact real product packaging rather than inventing a new design. No added headline, caption, arrows, extra bottle, glass, fruit, pets, people, certifications, claims or watermark."
+  },
+  {
+    "id": "health-500",
+    "paths": [
+      "/workspace/sites/credee-global-partner-20261102/handoff/product-scenes/health-inner-care-lineup.png"
+    ],
+    "prompt": "Use case: precise-object-edit. Image 1 is the EXACT photograph to edit. Perform only ONE local change: enlarge the THIRD bottle from the left (central large Rice Silica flip-cap bottle, 500mL) by about 12% in both width and height from its current size. Keep its bottom fixed on the same tabletop baseline. Make this central 500mL bottle clearly, modestly taller and wider than the red and green 300mL bottles to its right. It should become slightly taller than the pump bottle to its left. Maintain natural original bottle proportions: scale uniformly, do not stretch.\nPreserve EVERYTHING ELSE as closely as possible: same horizontal 3:2 canvas, identical bright white/soft green background, exact five products and order, position and size of the other four bottles, same lighting, shadows and tabletop. Do not enlarge any other bottle. Keep sufficient small gaps to adjacent bottles so no labels overlap. Keep enlarged bottle's cap and base inside frame with a little breathing room. Preserve the central bottle's complete label artwork and text, Rice Silica, 19260ppm and 9000ppm, all typography, gold color, illustration and white packaging. Do not change labels, add volume text, claims, props, caption or watermark. The first small Rice Silica, second pump bottle, fourth red 米ぬかの恵み bottle and fifth green 田七人参de笑み bottle must remain unchanged. Only the central third bottle's scale is being corrected."
+  }
+]

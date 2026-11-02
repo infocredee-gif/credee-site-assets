@@ -1,0 +1,25 @@
+﻿スロット	ファイル	幅px	高さpx	用途	作成区分
+P-00	page/assets/rice-husk-silica-banner-centered.webp	2172	724	田園風景。もみ殻と白いシリカ粉末を中央配置。商品容器・下の文字・矢印なし	生成・中央配置版
+H-01	page/assets/hero-partnership-female.webp	1671	941	日本人女性の代表者と海外パートナーが世界地図の前で握手するイメージ	生成・女性代表者版
+C-01a	page/assets/rice-husks.webp	1448	1086	当社について：稲穂・もみ殻	生成
+C-01b	page/assets/research-lab.webp	1448	1086	当社について：研究風景	生成
+C-01d	page/assets/silica-diagram.svg	640	320	当社について：研究写真の下、特許資料の左に置くシリカのイメージ図	編集可能なSVG図解
+C-01c	page/assets/family-pets.webp	1448	1086	当社について：家族とペット	生成
+P-01-inset	page/assets/silica-powder-inset.webp	1254	1254	Health枠の丸い画像：白いシリカ粉末	生成・訂正版
+P-01	page/assets/health-family.webp	1448	1086	Health Products：家族5人の写真。両端を切らず全体表示	生成
+P-02	page/assets/beauty-woman.webp	1448	1086	Beauty Products：女性	生成
+P-03	page/assets/spring-water.webp	1448	1086	Water Products：清らかな湧水	生成
+P-04	page/assets/pets-drinking-water.webp	1448	1086	ゴールデンレトリバーと猫が、それぞれの器の水を飲む様子	生成・飲水シーン版
+LOGO	page/assets/credee-logo.webp	800	721	現行ホームページの企業ロゴ	既存
+PATENT	page/assets/patent-reference.webp	1086	1448	既存の特許証と登録情報。周囲と高さをそろえた独立枠。PC約232×310px、スマートフォンは下段の列幅いっぱい・高さ190px。全体表示	既存
+P-01-product	page/assets/health-inner-care-lineup-500ml.webp	1536	1024	中央のライスシリカ500mLを300mLの2商品より少し大きくしたインナーケア5商品の集合画像	既存5商品を元に集合画像を生成
+P-02-product	page/assets/hug-beauty-six-products.webp	1396	1127	HUG+ BEAUTYの6商品。提供された集合写真を掲載	提供画像
+P-03-product	page/assets/water-products-studio.webp	1448	1086	白と淡いブルーの背景に並べた潤環とシリカTimeの2商品	提供ボトルを元に背景付き集合画像を生成
+P-04-product	page/assets/pet-water-studio.webp	1448	1086	淡いピーチ色の背景に置いた、犬と猫のイラスト入り潤環 for PETのイメージボトル	ラベルを維持し、背景をピーチ色に変更
+P-01-product-1	page/assets/health-products/rice-silica-small.webp	1024	1536	ライスシリカ（小ボトル）。透過PNGはproduct-cutouts/rice-silica-small.png	提供写真を元に背景透過加工
+P-01-product-2	page/assets/health-products/rice-silica-medium.webp	1024	1536	ライスシリカ（ポンプボトル）。透過PNGはproduct-cutouts/rice-silica-medium.png	提供写真を元に背景透過加工
+P-01-product-3	page/assets/health-products/rice-silica-large.webp	1024	1536	ライスシリカ（大ボトル）。透過PNGはproduct-cutouts/rice-silica-large.png	提供写真を元に背景透過加工
+P-01-product-4	page/assets/health-products/komenuka-megumi.webp	1024	1536	米ぬかの恵み。透過PNGはproduct-cutouts/komenuka-megumi.png	提供写真を元に背景透過加工
+P-01-product-5	page/assets/health-products/denshichi-emi.webp	1244	1265	田七人参de笑み。透過PNGはproduct-cutouts/denshichi-emi.png	提供写真を元に背景透過加工
+P-03-product-1	page/assets/water-products/junkan.webp	2048	2048	潤環。原寸PNGはprovided-products/junkan.png	提供画像（ラベルを維持）
+P-03-product-2	page/assets/water-products/silica-time.webp	1365	2048	シリカTime。原寸PNGはprovided-products/silica-time.png	提供画像（ラベルを維持）

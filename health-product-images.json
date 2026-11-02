@@ -1,0 +1,72 @@
+[
+  {
+    "id": "rice-silica-small",
+    "name": "ライスシリカ（小ボトル）",
+    "file_name": "rice-silica-small.webp",
+    "png_file": "product-cutouts/rice-silica-small.png",
+    "width": 1024,
+    "height": 1536,
+    "viewbox": [
+      286,
+      159,
+      452,
+      1330
+    ]
+  },
+  {
+    "id": "rice-silica-medium",
+    "name": "ライスシリカ（ポンプボトル）",
+    "file_name": "rice-silica-medium.webp",
+    "png_file": "product-cutouts/rice-silica-medium.png",
+    "width": 1024,
+    "height": 1536,
+    "viewbox": [
+      258,
+      36,
+      508,
+      1496
+    ]
+  },
+  {
+    "id": "rice-silica-large",
+    "name": "ライスシリカ（大ボトル）",
+    "file_name": "rice-silica-large.webp",
+    "png_file": "product-cutouts/rice-silica-large.png",
+    "width": 1024,
+    "height": 1536,
+    "viewbox": [
+      271,
+      35,
+      482,
+      1489
+    ]
+  },
+  {
+    "id": "komenuka-megumi",
+    "name": "米ぬかの恵み",
+    "file_name": "komenuka-megumi.webp",
+    "png_file": "product-cutouts/komenuka-megumi.png",
+    "width": 1024,
+    "height": 1536,
+    "viewbox": [
+      282,
+      61,
+      462,
+      1405
+    ]
+  },
+  {
+    "id": "denshichi-emi",
+    "name": "田七人参de笑み",
+    "file_name": "denshichi-emi.webp",
+    "png_file": "product-cutouts/denshichi-emi.png",
+    "width": 1244,
+    "height": 1265,
+    "viewbox": [
+      416,
+      25,
+      413,
+      1209
+    ]
+  }
+]

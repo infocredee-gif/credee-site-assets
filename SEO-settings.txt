@@ -1,0 +1,44 @@
+STUDIOのSEO設定
+更新日：2026年11月2日
+
+このファイルはSTUDIOに設定する値と確認事項です。STUDIO側の設定・公開はまだ行っていません。
+原稿本文を変更せずに行うSEO設定をまとめています。
+
+ページタイトル
+海外市場開拓パートナー募集｜株式会社クレディー
+
+説明文
+植物由来シリカ製品を世界へ。株式会社クレディーは、中国・韓国・台湾・インド・ベトナムをはじめとする海外市場開拓パートナーを募集しております。
+
+ソーシャルカバー（OGP画像）
+assets/hero-partnership-female.webpをSTUDIOへアップロードし、ページのカバー画像に指定します。
+OGP画像はSNSなどで共有するときの表示用です。
+
+見出し・画像
+elements.tsvのh1・h2・h3に合わせてタグを設定します。
+image-alt.tsvの内容を各画像の代替テキストに設定します。
+本文は文字のまま配置し、写真と一体化させないでください。
+
+公開URL・正規URL
+本番URLは未確定です。既存ホームページに追加するページのパスを決めてください。
+canonicalとog:urlはSTUDIOの自動出力を利用し、公開後に本番URLと一致することを確認します。
+カスタムコードでcanonicalやog:urlを重ねて追加しないでください。
+確認用のSites URLやGitHub Pages URLは本番の正規URLに指定しません。
+
+公開時と公開後
+検索掲載する本番ページではnoindexが有効になっていないことを確認します。
+GitHub用index.htmlにあるnoindexは確認用見本だけの設定です。STUDIOへ転記しません。
+STUDIO側でサイトマップを有効にし、Google Search Consoleでサイトマップ送信・本番URLの検査を行います。
+既存ホームページから新ページへのリンクを追加します。
+Search Consoleで表示回数・検索語・クリックを確認して公開後の改善に利用します。
+検索登録状況の確認と効果測定は本番公開後に行います。
+
+公式ヘルプ（確認日：2026年11月2日）
+StudioのSEO対策
+https://help.studio.design/ja/articles/2639106
+canonicalタグ
+https://help.studio.design/ja/articles/10030472
+サイトマップ
+https://help.studio.design/ja/articles/4581345
+Search Console連携
+https://help.studio.design/ja/articles/1949442

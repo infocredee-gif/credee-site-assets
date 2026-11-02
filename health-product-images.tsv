@@ -1,0 +1,6 @@
+﻿配置順	商品	背景透過PNG	WebP	元画像の幅px	元画像の高さpx	表示範囲 x y 幅 高さ
+1	ライスシリカ（小ボトル）	product-cutouts/rice-silica-small.png	page/assets/health-products/rice-silica-small.webp	1024	1536	286 159 452 1330
+2	ライスシリカ（ポンプボトル）	product-cutouts/rice-silica-medium.png	page/assets/health-products/rice-silica-medium.webp	1024	1536	258 36 508 1496
+3	ライスシリカ（大ボトル）	product-cutouts/rice-silica-large.png	page/assets/health-products/rice-silica-large.webp	1024	1536	271 35 482 1489
+4	米ぬかの恵み	product-cutouts/komenuka-megumi.png	page/assets/health-products/komenuka-megumi.webp	1024	1536	282 61 462 1405
+5	田七人参de笑み	product-cutouts/denshichi-emi.png	page/assets/health-products/denshichi-emi.webp	1244	1265	416 25 413 1209

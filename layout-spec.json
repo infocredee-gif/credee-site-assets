@@ -1,0 +1,48 @@
+{
+  "page": {
+    "max_content_width_px": 1120,
+    "background": "#FFFFFF",
+    "text": "#101010",
+    "green": "#0E6B3C",
+    "navy": "#0B3A7A",
+    "mobile_breakpoint_px": 720
+  },
+  "text": {
+    "desktop_body_px": 19,
+    "desktop_line_height": 2.05,
+    "mobile_body_px": 17,
+    "mobile_line_height": 2,
+    "unchanged_copy_blocks": 30
+  },
+  "product_cards": {
+    "desktop_columns": 2,
+    "mobile_columns": 1,
+    "image_columns": [
+      1,
+      1
+    ],
+    "each_image_aspect_ratio": "4:3",
+    "combined_aspect_ratio": "8:3",
+    "fit": "contain",
+    "position": "center",
+    "health_silica_inset": "lower-left"
+  },
+  "company_patent": {
+    "desktop_width_px": 232,
+    "desktop_height_px": 310,
+    "tablet_width_px": 210,
+    "tablet_height_px": 280,
+    "mobile_height_px": 190,
+    "fit": "contain",
+    "align": "top and bottom match adjacent photos",
+    "source_unchanged": true
+  },
+  "lineup_banner": {
+    "desktop_aspect_ratio": "4:1",
+    "mobile_aspect_ratio": "3:1",
+    "caption": null,
+    "product_bottles": false
+  },
+  "assets": "assets/",
+  "note": "機械可読の実装参照資料です。STUDIOのネイティブインポート形式ではありません。詳しい配置はSTUDIO-implementation-guide.txtを参照。"
+}
