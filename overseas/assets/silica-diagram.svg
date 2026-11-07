@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="320" viewBox="0 0 640 320" role="img" aria-labelledby="title desc">
+  <title id="title">シリカのイメージ図</title>
+  <desc id="desc">オルトケイ酸 H₄SiO₄ の分子模型を示す模式図。中央のケイ素原子Siに4個の酸素原子Oが結合し、それぞれのOに水素原子Hが1個ずつ結合しています。原子の大きさや角度は模式的に表現しています。</desc>
+  <defs>
+    <radialGradient id="silicon" cx="31%" cy="24%" r="79%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".38" stop-color="#dfF2ff"/>
+      <stop offset=".78" stop-color="#a9d3ef"/>
+      <stop offset="1" stop-color="#67a8d2"/>
+    </radialGradient>
+    <radialGradient id="oxygen" cx="30%" cy="23%" r="80%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".39" stop-color="#fbe6e2"/>
+      <stop offset=".8" stop-color="#f0bcb4"/>
+      <stop offset="1" stop-color="#d78b80"/>
+    </radialGradient>
+    <radialGradient id="hydrogen" cx="30%" cy="25%" r="80%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".72" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dfeaf0"/>
+    </radialGradient>
+    <linearGradient id="bond" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#638ca5"/>
+      <stop offset=".48" stop-color="#d5e8f1"/>
+      <stop offset="1" stop-color="#648da4"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="320" fill="#ffffff"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M320 160 190 88M320 160 463 80" stroke="url(#bond)" stroke-width="12"/>
+    <path d="M190 88 136 54M463 80 516 40" stroke="url(#bond)" stroke-width="9"/>
+    <path d="M320 160 190 88M320 160 463 80M190 88 136 54M463 80 516 40" stroke="#ffffff" stroke-opacity=".72" stroke-width="2.4"/>
+  </g>
+  <g stroke-width="1.8">
+    <circle data-element="H" cx="136" cy="54" r="20" fill="url(#hydrogen)" stroke="#507287"/>
+    <circle data-element="H" cx="516" cy="40" r="20" fill="url(#hydrogen)" stroke="#507287"/>
+    <circle data-element="O" cx="190" cy="88" r="30" fill="url(#oxygen)" stroke="#a65a50"/>
+    <circle data-element="O" cx="463" cy="80" r="30" fill="url(#oxygen)" stroke="#a65a50"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M320 160 210 247M320 160 465 242" stroke="url(#bond)" stroke-width="15"/>
+    <path d="M210 247 156 286M465 242 522 282" stroke="url(#bond)" stroke-width="10"/>
+    <path d="M320 160 210 247M320 160 465 242M210 247 156 286M465 242 522 282" stroke="#ffffff" stroke-opacity=".75" stroke-width="3"/>
+  </g>
+  <g stroke-width="1.8">
+    <circle data-element="Si" cx="320" cy="160" r="43" fill="url(#silicon)" stroke="#0b3a7a"/>
+    <circle data-element="O" cx="210" cy="247" r="30" fill="url(#oxygen)" stroke="#a65a50"/>
+    <circle data-element="O" cx="465" cy="242" r="30" fill="url(#oxygen)" stroke="#a65a50"/>
+    <circle data-element="H" cx="156" cy="286" r="20" fill="url(#hydrogen)" stroke="#507287"/>
+    <circle data-element="H" cx="522" cy="282" r="20" fill="url(#hydrogen)" stroke="#507287"/>
+  </g>
+  <g fill="#ffffff" opacity=".85">
+    <ellipse cx="304" cy="140" rx="13" ry="6" transform="rotate(-25 304 140)"/>
+    <ellipse cx="180" cy="75" rx="9" ry="4" transform="rotate(-25 180 75)"/>
+    <ellipse cx="453" cy="67" rx="9" ry="4" transform="rotate(-25 453 67)"/>
+    <ellipse cx="200" cy="234" rx="9" ry="4" transform="rotate(-25 200 234)"/>
+    <ellipse cx="455" cy="229" rx="9" ry="4" transform="rotate(-25 455 229)"/>
+  </g>
+  <g fill="#101010" font-family="Arial, sans-serif" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <text x="320" y="162" font-size="35">Si</text>
+    <g font-size="26"><text x="190" y="89">O</text><text x="463" y="81">O</text><text x="210" y="248">O</text><text x="465" y="243">O</text></g>
+    <g font-size="19"><text x="136" y="55">H</text><text x="516" y="41">H</text><text x="156" y="287">H</text><text x="522" y="283">H</text></g>
+  </g>
+</svg>
