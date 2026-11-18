@@ -435,3 +435,116 @@
    「（吸光光度法による体内ミネラル検査）」の行が左端まで戻って段が崩れた。
    ぶら下げインデントにして、折り返した行も値の位置に揃える。 */
 .credee-top .evi .spec{padding-left:8em;text-indent:-8em}
+
+/* ===== ファーストビューの動画（2026-11-17） ===== */
+/* 26秒・BGM入り。テロップが焼き込まれているので、縦書きの見出し2つは外してある。
+
+   表示域は「知る・選ぶ・ともに」の帯の上まで（bottom:var(--fvnav-h)）。
+   帯の下まで敷くと、テロップの下3分の1が帯に隠れる（実測）。
+
+   動画は切り抜かない（object-fit:contain）。切り抜く案は2通り試して、
+   どちらも必ずテロップが欠けた。テロップが上にも下にもあるため。
+     下端基準（50% 100%）… 1280x900で、最後の「植物由来シリカで。」が上で切れた（実測）
+     中央基準（50% 50%） … 1920x1080では下のテロップが切れる（枠の比が2.30になるため）
+   画面の形が16:9から離れるほど欠ける。どの基準でも避けられない。
+   全体を入れれば、どの画面でも必ず読める。余った左右は白。
+   動画の地色が白に近いので、商品のカットでは境目がほとんど見えない。 */
+/* 動画の下に、音のボタン専用の帯（--mvbar）をはさむ。
+   ボタンを動画の上に重ねると、どこに置いてもテロップを隠す。実測：
+     390px  … 右下だと「未来の健康は、シリカ習慣から」が「未来の健康は、シリ」で隠れた
+     右上   … 最後の「植物由来シリカで。」が上にあるので、そこで隠れる
+   動画のどの場所も、26秒のうちどこかでテロップが来る。だから外に出す。 */
+/* ファーストビューの高さは、画面いっぱい（100vh）ではなく**動画に合わせる**。
+   100vh のままだと、縦長の窓で動画の上下に白が大きく余った。
+   1280x1640 で実測したところ、上下に合わせて625pxの白が出た。
+
+   並びは 動画 → 音のボタン → 知る・選ぶ・ともに の縦積み。PCもスマホも同じ。
+   動画の枠は 16:9。上限は「画面の高さ − ヘッダー」。
+   つまり動画は必ず1画面に収まり、音のボタンと帯はその下に続く。
+   帯のぶんまで引くと動画が小さくなりすぎ、左右に白が出た（実測）。
+     上限 100vh−ヘッダー−帯−ボタン … 1280x900で左右107px、1920x1080で267pxの白
+     上限 100vh−ヘッダー           … 1280x900・768・390は白ゼロ、1920x1080で64px
+   帯（知る・選ぶ・ともに）は画面の下で少しだけ見える位置になり、
+   「下に続く」ことが伝わる。1280x900で56px、1920x1080で29pxが見えている。
+   （以下は、上限を下げていたときの覚え書き）
+   画面に収まらないときは max-height で抑える
+   （そのとき動画は左右に白を残して縮む。テロップは欠けない）。
+     --hdr      サイト共通の固定ヘッダーの高さ。JS が実測して入れる
+     --fvnav-h  知る・選ぶ・ともにの帯（既定156px、880px以下で120px）
+     --mvbar    音のボタンの帯
+     20px       帯の実際の高さが --fvnav-h より少し大きいための余裕 */
+.credee-top .fv{--mvbar:52px;--hdr:81px;
+  height:auto;min-height:0;display:flex;flex-direction:column}
+.credee-top .fv .pic{
+  position:relative;inset:auto;width:100%;aspect-ratio:16/9;margin:0;background:#fff;
+  max-height:calc(100vh - var(--hdr))}
+.credee-top .fv .pic video.mv{
+  width:100%;height:100%;object-fit:contain;display:block}
+.credee-top .fv .fvnav{position:static}
+.credee-top .fv .scroll{display:none}
+
+/* ===== 動画の下の、田園の写真と縦書きのキャッチ（2026-11-17・ユーザー指定） =====
+   もとのファーストビューにあった写真（cr-top-01 田んぼと山と空）と、
+   縦書きの2つをそのまま移してある。文言は変えていない。
+   h1 はここにあるので、画面に出さない隠し見出しは置いていない。
+
+   値は、もとの .fv の指定をそのまま使う（白いベールの2段グラデーション、
+   見出しの白いハロー、左右の位置）。違うのは次の2点だけ。
+     高さ  画面いっぱい（100vh）ではなく 82vh。上に動画があるため
+     上下  帯（--fvnav-h）が無いので、割合で置く
+
+   縦書きの開始位置に max(…, 104px) を入れてある。
+   割合だけにすると、サイト共通の固定ヘッダー（実測 PC 81px・スマホ 75px）に
+   「植」「大」の字が隠れた。390pxで実際にそうなった。 */
+.credee-top .fvc{position:relative;height:82vh;min-height:560px;overflow:hidden}
+.credee-top .fvc .pic{position:absolute;inset:0}
+.credee-top .fvc .pic img{object-position:50% 100%}
+.credee-top .fvc .veil{position:absolute;inset:0;z-index:2;background:
+  linear-gradient(0deg,
+    rgba(255,255,255,0) 80px,
+    rgba(255,255,255,.34) 190px,
+    rgba(255,255,255,.34) 340px,
+    rgba(255,255,255,0) 440px),
+  linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.34) 34%,rgba(255,255,255,0) 62%)}
+.credee-top .fvc .title{
+  position:absolute;top:max(9%,104px);bottom:7%;right:9%;
+  display:flex;align-items:flex-start;z-index:3}
+.credee-top .fvc .title h1{
+  writing-mode:vertical-rl;font-family:var(--mincho);font-weight:700;color:var(--sumi);
+  font-size:clamp(30px,min(5.2vh,4.6vw),62px);line-height:1.62;letter-spacing:.16em;
+  -webkit-text-stroke:0.01em currentColor;margin:0;
+  text-shadow:0 0 10px #fff,0 0 20px #fff,0 0 34px rgba(255,255,255,.96),0 1px 46px rgba(255,255,255,.9)}
+.credee-top .fvc .welcome{
+  position:absolute;top:max(12%,104px);left:48px;z-index:3;
+  writing-mode:vertical-rl;font-family:var(--mincho);font-weight:600;color:var(--sumi);
+  font-size:clamp(19px,min(3vh,2.6vw),32px);letter-spacing:.2em;line-height:2.05;
+  text-shadow:0 0 9px #fff,0 0 18px #fff,0 0 30px rgba(255,255,255,.95)}
+@media (max-width:880px){
+  .credee-top .fvc{height:74vh;min-height:500px}
+  .credee-top .fvc .title{right:7%;top:max(9%,96px);bottom:6%}
+  .credee-top .fvc .title h1{
+    font-size:clamp(26px,min(4.6vh,6.4vw),42px);letter-spacing:.15em;line-height:1.6}
+  .credee-top .fvc .welcome{
+    left:18px;top:max(9%,96px);font-size:clamp(18px,min(2.6vh,3.8vw),24px);letter-spacing:.16em;line-height:2}
+}
+
+/* 音のボタン。ブラウザは音付きの自動再生を禁止しているので、押したときだけ音が出る。
+   文字は18px、押せる高さは44px以上。背景は白地に濃い墨で、コントラストを確保する。 */
+.credee-top .fv .mvsound{
+  align-self:flex-end;margin:4px 18px;z-index:5;
+  display:inline-flex;align-items:center;gap:9px;
+  min-height:44px;padding:10px 18px;
+  border:1px solid rgba(32,30,28,.20);border-radius:999px;
+  background:rgba(255,255,255,.88);color:var(--sumi);
+  font-family:var(--gothic);font-weight:400;font-size:18px;
+  letter-spacing:.06em;line-height:1;cursor:pointer;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.credee-top .fv .mvsound:hover{background:#fff}
+.credee-top .fv .mvsound:focus-visible{outline:2px solid var(--sumi);outline-offset:3px}
+.credee-top .fv .mvsound svg{flex:0 0 20px}
+.credee-top .fv .mvsound .ic-sound{display:none}
+.credee-top .fv .mvsound.sound-on .ic-mute{display:none}
+.credee-top .fv .mvsound.sound-on .ic-sound{display:inline}
+@media (max-width:480px){
+  .credee-top .fv .mvsound{margin:4px 10px;padding:9px 14px;gap:7px}
+}
