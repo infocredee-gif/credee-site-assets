@@ -480,6 +480,9 @@
   max-height:calc(100vh - var(--hdr))}
 .credee-top .fv .pic video.mv{
   width:100%;height:100%;object-fit:contain;display:block}
+/* 止まったあとだけ、押すともう一度流れる。押せることを指の形で知らせる。
+   再生中は指の形にしない（押しても何も起きないため）。 */
+.credee-top .fv .pic video.mv.mv-done{cursor:pointer}
 .credee-top .fv .fvnav{position:static}
 .credee-top .fv .scroll{display:none}
 
